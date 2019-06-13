@@ -21,7 +21,9 @@ describe('containers', function() {
   describe('Search Container', function() {
     before(function () {
       sinon.spy(store, 'dispatch');
+      console.log('before')
       component = shallowWithStore(<SearchContainer />, store);
+      console.log('after')
     });
     beforeEach(function() {
       store.dispatch.reset();

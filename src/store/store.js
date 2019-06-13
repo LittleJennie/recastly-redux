@@ -11,6 +11,16 @@ import exampleVideoData from '../data/exampleVideoData.js';
 //         applyMiddleware(thunk)
 //     );
 // }
+// export var Thunk = function(x) {
+//     return function(dispatch) {
+//       setTimeout(function() {
+//         dispatch({
+//           type: 'CHANGE_VIDEO',
+//         });
+//       }, 100);
+//     };
+//   };
+
 var store = createStore(rootReducer, applyMiddleware(thunk));
 console.log(store.getState())
 
