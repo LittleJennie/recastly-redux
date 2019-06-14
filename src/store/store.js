@@ -21,7 +21,13 @@ import exampleVideoData from '../data/exampleVideoData.js';
 //     };
 //   };
 
-var store = createStore(rootReducer, applyMiddleware(thunk));
+var initialState = {
+    currentVideo:exampleVideoData[0],
+    videoList: exampleVideoData
+}
+
+
+var store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 console.log(store.getState())
 
 export default store;
