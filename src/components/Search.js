@@ -1,6 +1,5 @@
 import React from 'react';
 
-var inputText = document.getElementsByClassName('form-control').innerHTML;
 
 var Search = ({handleSearchInputChange}) => {
   return (

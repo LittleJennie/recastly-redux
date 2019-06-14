@@ -8,10 +8,10 @@ import store from '../store/store.js';
 var handleVideoSearch = (q) => {
   //TODO:  Write an asynchronous action to handle a video search!
   return () => {    
-    console.log({YOUTUBE_API_KEY, q})
     searchYouTube({key:YOUTUBE_API_KEY, query:q}, function(data) {
-      store.dispatch(() => changeVideo(data[0]));
-      store.dispatch(() => changeVideoList(data));
+      console.log(data[0])
+      store.dispatch(changeVideo(data[0]));
+      store.dispatch(function () { return changeVideoList(data)}(data));
     }) // the state in store
   }
 };
